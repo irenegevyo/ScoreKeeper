@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         int nightMode = AppCompatDelegate.getDefaultNightMode();
-
         if(nightMode == AppCompatDelegate.MODE_NIGHT_YES){
             menu.findItem(R.id.night_mode).setTitle(R.string.day_mode);
         } else{
@@ -81,13 +80,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.night_mode) {
             int nightMode = AppCompatDelegate.getDefaultNightMode();
-            
+
             if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
-                AppCompatDelegate.setDefaultNightMode
-                        (AppCompatDelegate.MODE_NIGHT_NO);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             } else {
-                AppCompatDelegate.setDefaultNightMode
-                        (AppCompatDelegate.MODE_NIGHT_YES);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             }
             recreate();
         }
